@@ -1,0 +1,77 @@
+$ next build
+info  - Loaded env from /Users/gilga/Projects/bliks/apps/frontend/.env
+warn  - You have enabled experimental feature (forceSwcTransforms) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+
+info  - Linting and checking validity of types...
+info  - Creating an optimized production build...
+Warning: For production Image Optimization with Next.js, the optional 'sharp' package is strongly recommended. Run 'yarn add sharp', and Next.js will use it automatically for Image Optimization.
+Read more: https://nextjs.org/docs/messages/sharp-missing-in-production
+info  - Compiled successfully
+info  - Collecting page data...
+Warning: You have opted-out of Automatic Static Optimization due to `getInitialProps` in `pages/_app`. This does not opt-out pages with `getStaticProps`
+Read more: https://nextjs.org/docs/messages/opt-out-auto-static-optimization
+
+info  - Generating static pages (0/20)
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+info  - Generating static pages (5/20)
+info  - Generating static pages (10/20)
+info  - Generating static pages (15/20)
+info  - Generating static pages (20/20)
+info  - Finalizing page optimization...
+
+Route (pages)                              Size     First Load JS
+┌ ● /                                      3.48 kB         397 kB
+├   /_app                                  0 B             364 kB
+├ ● /404                                   1.99 kB         368 kB
+├ λ /admin                                 2.39 kB         452 kB
+├ λ /admin/card-download/[id]              8.49 kB         372 kB
+├ λ /admin/customer                        2.72 kB         416 kB
+├ λ /admin/customer/[id]                   4.16 kB         471 kB
+├ ● /admin/sign-in                         2.96 kB         397 kB
+├ λ /admin/vendor                          2.81 kB         416 kB
+├ λ /admin/vendor/[id]                     7.54 kB         475 kB
+├ λ /api/prisma-migrate/customerCard       0 B             364 kB
+├ λ /api/prisma-migrate/vendorCard         0 B             364 kB
+├ λ /api/trpc-playground                   0 B             364 kB
+├ λ /api/trpc/[trpc]                       0 B             364 kB
+├ λ /api/v1/code                           0 B             364 kB
+├ λ /api/webhook                           0 B             364 kB
+├ λ /basicauthlogin                        522 B           364 kB
+├ λ /card                                  15.9 kB         438 kB
+├ λ /card/create                           628 B           451 kB
+├ λ /card/edit/[id]                        765 B           451 kB
+├ λ /card/embed                            1.79 kB         437 kB
+├ λ /checkout                              6.18 kB         402 kB
+├ ● /customer/activate                     838 B           364 kB
+├ ● /customer/reset-password-redirect      2.2 kB          368 kB
+├ λ /history                               2.38 kB         412 kB
+├ λ /home                                  3.79 kB         426 kB
+├ ● /reset-password                        3.12 kB         397 kB
+├ λ /settings                              6.71 kB         449 kB
+├ λ /shop-administration                   1.39 kB         423 kB
+├ ● /sign-up                               11.8 kB         432 kB
+├ λ /sign-up-card                          2.22 kB         440 kB
+├ ● /sign-up-success                       1.93 kB         368 kB
+├ λ /subscription                          1.72 kB         380 kB
+├ ● /thank-you                             1.92 kB         368 kB
+└ ● /update-password                       1.73 kB         393 kB
++ First Load JS shared by all              364 kB
+  ├ chunks/framework-25e08e5e72c5b039.js   66.8 kB
+  ├ chunks/main-9f2101e025ad6f2b.js        34.8 kB
+  ├ chunks/pages/_app-8264550a6b128200.js  261 kB
+  └ chunks/webpack-d36b50b5fb8708d9.js     1.05 kB
+
+ƒ Middleware                               52 kB
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+

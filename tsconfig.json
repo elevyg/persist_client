@@ -1,0 +1,6 @@
+{
+  "references": [{ "path": "./shared" }, { "path": "./frontend" }],
+  "files": [],
+  "include": [],
+  "exclude": ["**/node_modules"]
+}

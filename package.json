@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "name": "bliks",
+  "license": "UNLICENSED",
+  "scripts": {
+    "vercel:env:push": "bash ./vercel-env-push.sh",
+    "vercel:env:pull": "vercel env pull ./frontend/.env",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "prettier": "^2.8.4",
+    "turbo": "^1.8.2"
+  }
+}

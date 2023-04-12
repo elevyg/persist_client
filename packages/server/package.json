@@ -1,0 +1,19 @@
+{
+  "name": "@bliks/server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prisma:generate": "prisma generate --schema=./src/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.26.1",
+    "@trpc/client": "^10.14.0",
+    "@trpc/next": "^10.14.0",
+    "@trpc/react-query": "^10.14.0",
+    "@trpc/server": "^10.14.0",
+    "bson-objectid": "^2.0.4",
+    "googleapis": "^112.0.0",
+    "jsonwebtoken": "^9.0.0"
+  }
+}

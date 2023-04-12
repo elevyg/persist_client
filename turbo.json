@@ -1,0 +1,52 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"],
+      "env": [
+        "VERCEL_ENV",
+        "VERCEL_URL",
+        "RENDER_INTERNAL_HOSTNAME",
+        "PORT",
+        "CLOUDINARY_API_SECRET",
+        "RSA_PASSPHRASE",
+        "CLOUDINARY_URL",
+        "HOST_BACKEND",
+        "INSTAGRAM_CLIENT_SECRET",
+        "STRIPE_API_VERSION",
+        "STRIPE_SECRET_API_KEY",
+        "DEFAULT_ADMIN_SALT",
+        "DEFAULT_ADMIN_PASSWORD",
+        "DEFAULT_ADMIN_USER",
+        "MAILER_REFRESH_TOKEN",
+        "MAILER_CLIENT_SECRET",
+        "MAILER_CLIENT_ID",
+        "MAILER_USER",
+        "MONGODB_URI",
+        "PASSWORD_RESET_EXPIRES",
+        "JWT_EXPIRES",
+        "JWT_SECRET",
+        "NEXT_PUBLIC_HOST_PAGE",
+        "NEXT_PUBLIC_VERCEL_ENV",
+        "NEXT_PUBLIC_GA_TRACKING_ID",
+        "NEXT_PUBLIC_INSTAGRAM_CLIENT_ID",
+        "NEXT_PUBLIC_HOST_APP",
+        "NEXT_PUBLIC_CLOUDINARY_API_KEY",
+        "NEXT_PUBLIC_STRIPE_SHOP_PRICE_ID",
+        "NEXT_PUBLIC_STRIPE_CHIP_PRICE_ID",
+        "NEXT_PUBLIC_STRIPE_STARTER_PRICE_ID",
+        "NEXT_PUBLIC_STRIPE_CONNECT_CLIENT_ID",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_API_KEY",
+        "NEXT_PUBLIC_GOOGLE_API_KEY",
+        "APP_ENV"
+      ]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    }
+  }
+}

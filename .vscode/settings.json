@@ -1,0 +1,24 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/coverage/": true,
+    "**/dist/": true,
+    "**/build/": true,
+    "**/yarn.lock": true,
+    "**/.next": true,
+    "**/.git": true,
+    "**/app/ios": true,
+    "**/app/android": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true
+  },
+  "git.ignoreLimitWarning": true,
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "VSCodeCounter.useGitignore": true,
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
