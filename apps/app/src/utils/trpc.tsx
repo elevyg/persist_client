@@ -20,7 +20,7 @@ export const trpc = createTRPCReact<AppRouter>()
  * Extend this function when going to production by
  * setting the baseUrl to your production API URL.
  */
-const getBaseUrl = () => {
+export const getBaseUrl = () => {
   // return "http://192.168.178.194:3000";
   // in our testing env, we use the stage
   if (process.env.APP_ENV === "test") {
