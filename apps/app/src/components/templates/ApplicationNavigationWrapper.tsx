@@ -3,12 +3,16 @@ import { Text, View } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import { trpc } from "../../utils/trpc";
 
+const wakeUpProcedure = trpc.createClient()
+
 const ApplicationNavigationWrapper: React.FunctionComponent = () => {
-  const wakeUp = trpc.wakeUp.useMutation({
-    onSuccess: (data) => {
-      console.log("woke up", data);
-    },
-  });
+  // const wakeUp = trpc.wakeUp.useMutation({
+  //   onSuccess: (data) => {
+  //     console.log("woke up", data);
+  //   },
+  // });
+
+  const wakeUp = useQuery
 
   const handleWokeUp = () => {
     wakeUp.mutate();
