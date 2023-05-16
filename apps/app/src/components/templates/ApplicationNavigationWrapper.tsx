@@ -1,9 +1,24 @@
-import React from "react";
-import { Text, View } from "react-native";
-import { TouchableHighlight } from "react-native-gesture-handler";
-import { trpc } from "../../utils/trpc";
+import { AppRouter } from "@bliks/server/src/routers/_app"
+import { useMutation, useQuery } from "@tanstack/react-query"
+import { createTRPCProxyClient, httpBatchLink } from "@trpc/client"
+import React from "react"
+import { Text, View } from "react-native"
+import { TouchableHighlight } from "react-native-gesture-handler"
+import superjson from "superjson"
+import { getBaseUrl } from "../../utils/trpc"
 
-const wakeUpProcedure = trpc.createClient()
+const wakeUpProcedure = createTRPCProxyClient<AppRouter>({
+  transformer: superjson,
+  links: [
+    httpBatchLink({
+      url: `${getBaseUrl()}/api/trpc`,
+      // async headers() {
+      //   const token = await getData("token");
+      //   return { Authorization: `Bearer ${token}` };
+      // },
+    }),
+  ],
+}).wakeUp
 
 const ApplicationNavigationWrapper: React.FunctionComponent = () => {
   // const wakeUp = trpc.wakeUp.useMutation({
@@ -12,11 +27,11 @@ const ApplicationNavigationWrapper: React.FunctionComponent = () => {
   //   },
   // });
 
-  const wakeUp = useQuery
+  const wakeUp = useMutation(["wokeUp"], () => wakeUpProcedure.mutate())
 
   const handleWokeUp = () => {
-    wakeUp.mutate();
-  };
+    wakeUp.mutate()
+  }
 
   return (
     <View
@@ -38,7 +53,7 @@ const ApplicationNavigationWrapper: React.FunctionComponent = () => {
         </View>
       </TouchableHighlight>
     </View>
-  );
-};
+  )
+}
 
-export default ApplicationNavigationWrapper;
+export default ApplicationNavigationWrapper
